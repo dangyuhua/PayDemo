@@ -48,6 +48,10 @@
 //        [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
 //            NSLog(@"reslut = %@",resultDic);
 //        }];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"缺少appId或者私钥,请检查参数设置" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){ }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:^{ }];
     }
 }
 
